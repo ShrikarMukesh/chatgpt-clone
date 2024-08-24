@@ -1,0 +1,6 @@
+npm i
+npm run dev
+
+npm install @clerk/clerk-react
+
+npm install -f react-type-animation
