@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  mongodb:
+    image: mongo:latest # Pull the latest MongoDB image
+    container_name: mongodb_container
+    restart: unless-stopped
+    ports:
+      - "27017:27017" # Expose MongoDB on port 27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root # Replace with your desired username
+      MONGO_INITDB_ROOT_PASSWORD: example # Replace with your desired password
+    volumes:
+      - mongo_data:/data/db # Persist data using Docker volumes
+      - mongo_config:/data/configdb # Persist config using Docker volumes
+
+volumes:
+  mongo_data:
+  mongo_config:

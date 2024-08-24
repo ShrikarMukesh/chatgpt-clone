@@ -1,3 +1,5 @@
 npm init -y
 
 npm i express
+
+mongodb://root:example@localhost:27017/?authSource=admin
